@@ -1,4 +1,4 @@
-# FormForge — tRPC Monorepo
+# formFactory — tRPC Monorepo
 
 Production-style form builder SaaS (Turborepo + Next.js + Express + tRPC + Drizzle).
 
@@ -17,7 +17,7 @@ pnpm dev                      # web :3000, api :8000
 
 | | |
 |---|---|
-| Email | `demo@formforge.dev` |
+| Email | `demo@formFactory.dev` |
 | Password | `demo1234` |
 | Public form | http://localhost:3000/f/cyberpunk-fan-survey-demo |
 

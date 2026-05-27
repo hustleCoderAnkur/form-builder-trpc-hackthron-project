@@ -15,7 +15,7 @@ import {
   Sparkles,
   Zap,
 } from "lucide-react"
-
+import { useRouter } from "next/navigation"
 import { Button } from "~/components/ui/button"
 
 const fadeUp = {
@@ -34,12 +34,13 @@ const stagger = {
 const navItems = [
   ["Stats", "#stats"],
   ["Missions", "#missions"],
-  ["FormForge", "/"],
+  ["formFactory", "/"],
   ["Store", "#pricing"],
   ["Contact", "#contact"],
 ]
 
-export default function FormForgeArcadeHome() {
+export default function formFactoryArcadeHome() {
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#090909] font-mono text-[#f4f4f4]">
       <StageTexture />
@@ -86,6 +87,7 @@ function Navbar() {
 }
 
 function HeroSection() {
+  const router = useRouter()
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-5 pb-28 pt-32">
       <div
@@ -124,12 +126,14 @@ function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-12">
-          <button className="h-[52px] rounded-[8px] border border-black/10 bg-[#efefef] px-10 text-[14px] text-black shadow-[0_5px_0_rgb(140,140,140),0_10px_20px_rgba(0,0,0,0.35)] transition-all duration-75 hover:translate-y-[1px] hover:shadow-[0_4px_0_rgb(140,140,140),0_8px_16px_rgba(0,0,0,0.35)] active:translate-y-[4px] active:shadow-[0_1px_0_rgb(140,140,140)]">
-            See Pricing
+          <button
+            onClick={() => router.push("/signup")}
+            className="h-[52px] rounded-[8px] border border-black/10 bg-[#efefef] px-6 text-[28px] text-black shadow-[0_5px_0_rgb(140,140,140),0_10px_20px_rgba(0,0,0,0.35)] transition-all duration-75 hover:translate-y-[1px] hover:shadow-[0_4px_0_rgb(140,140,140),0_8px_16px_rgba(0,0,0,0.35)] active:translate-y-[4px] active:shadow-[0_1px_0_rgb(140,140,140)]">
+            Get Started
           </button>
 
           <div className="mt-5 text-[10px] uppercase tracking-[0.2em] text-white/35">
-            Press tab to continue
+            Press to continue
           </div>
         </motion.div>
       </motion.div>
@@ -267,7 +271,7 @@ function BuilderWorkflowSection() {
       <div className="mx-auto max-w-6xl">
         <SectionIntro
           level="Level 02 - Workflow"
-          title="How FormForge Works"
+          title="How formFactory Works"
           quote="Build. Publish. Collect."
           text="A creator-first workflow engineered for startups, communities and modern teams."
         />
@@ -596,7 +600,7 @@ function FAQSection() {
     },
     {
       q: "Is there an API?",
-      a: "Yes. FormForge includes API documentation and typed internals powered by tRPC, Zod and Drizzle.",
+      a: "Yes. formFactory includes API documentation and typed internals powered by tRPC, Zod and Drizzle.",
     },
   ]
 
@@ -675,7 +679,7 @@ function ContactSection() {
         </div>
 
         <footer className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs uppercase tracking-[0.18em] text-white/38 sm:flex-row">
-          <span>© 2026 FormForge</span>
+          <span>© 2026 formFactory</span>
           <span>Turborepo / tRPC / Drizzle / Zod / Next.js</span>
         </footer>
       </div>

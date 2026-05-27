@@ -1,9 +1,9 @@
 export function buildOpenApiSpec() {
-  const base = process.env.API_BASE_URL ?? "http://localhost:8000";
+  const base = process.env.API_BASE_URL ?? "https://form-builder-trpc-hackthron-project.vercel.app/";
   return {
     openapi: "3.1.0",
     info: {
-      title: "FormForge API",
+      title: "formFactory API",
       version: "1.0.0",
       description:
         "Public REST API for published forms. Submit responses without authentication.",

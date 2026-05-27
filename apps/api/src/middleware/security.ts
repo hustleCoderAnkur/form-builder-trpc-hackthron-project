@@ -2,8 +2,8 @@ import type { Request, Response, NextFunction } from "express"
 import cors from "cors"
 
 const ALLOWED_ORIGINS = [
-  process.env.WEB_URL ?? "http://localhost:3000",
-  process.env.API_BASE_URL ?? "http://localhost:8000",
+  process.env.WEB_URL ?? "https://form-builder-trpc-hackthron-project.vercel.app/",
+  process.env.API_BASE_URL ?? "https://form-builder-trpc-hackthron-project.vercel.app/",
 ].filter(Boolean)
 
 export const corsMiddleware = cors({

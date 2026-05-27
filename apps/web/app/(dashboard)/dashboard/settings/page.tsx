@@ -302,14 +302,14 @@ export default function SettingsPage() {
                     </p>
 
                     <p className="mt-2 text-sm text-zinc-500">
-                      Access the FormForge API documentation portal.
+                      Access the formFactory API documentation portal.
                     </p>
                   </div>
 
                   <a
                     href={
                       process.env.NEXT_PUBLIC_API_URL?.replace("/trpc", "") ??
-                      "http://localhost:8000/docs"
+                      "https://form-builder-trpc-hackthron-project.vercel.app/docs"
                     }
                     target="_blank"
                     rel="noreferrer"

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const apiUrl = process.env.API_URL ?? "http://localhost:8000";
+const apiUrl = process.env.API_URL ?? "https://form-builder-trpc-hackthron-project.vercel.app/";
 
 const nextConfig = {
   images: {

@@ -12,7 +12,7 @@ import {
   responseAnswers,
 } from "../../schema";
 
-const DEMO_EMAIL = "demo@formforge.dev";
+const DEMO_EMAIL = "demo@formFactory.dev";
 const DEMO_PASSWORD = "demo1234";
 
 const SYSTEM_THEMES = [

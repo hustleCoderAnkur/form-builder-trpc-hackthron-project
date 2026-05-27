@@ -168,7 +168,7 @@ export default function AnalyticsPage() {
           </Link>
 
           <div className="hidden items-center gap-2 text-[8px] uppercase tracking-[0.3em] text-white/25 md:flex">
-            <span>FormForge</span>
+            <span>formFactory</span>
             <ChevronRight size={9} />
             <span>Dashboard</span>
             <ChevronRight size={9} />

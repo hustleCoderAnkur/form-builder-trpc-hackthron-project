@@ -58,7 +58,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
       <div className="fixed inset-0 pointer-events-none z-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.025)_2px,rgba(0,0,0,0.025)_4px)]" />
 
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 h-14 bg-[#050505]/95 backdrop-blur-xl border-b border-white/[0.055] flex items-center justify-between px-5">
-        <Link href="/dashboard" className="font-serif text-xl font-black tracking-[0.04em] uppercase">FormForge</Link>
+        <Link href="/dashboard" className="font-serif text-xl font-black tracking-[0.04em] uppercase">formFactory</Link>
         <button onClick={() => setMobileOpen((o) => !o)} className="w-9 h-9 border border-white/10 flex items-center justify-center text-white/70" aria-label={mobileOpen ? "Close menu" : "Open menu"}>
           {mobileOpen ? <X size={16} /> : <Menu size={16} />}
         </button>
@@ -91,7 +91,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
           {!collapsed && (
             <div className="min-w-0 overflow-hidden">
               <div className="text-[6.5px] tracking-[0.4em] uppercase text-white/30 mb-1 whitespace-nowrap">Creator Terminal</div>
-              <div className="font-serif text-[18px] font-black tracking-[0.04em] uppercase leading-none whitespace-nowrap">FormForge</div>
+              <div className="font-serif text-[18px] font-black tracking-[0.04em] uppercase leading-none whitespace-nowrap">formFactory</div>
             </div>
           )}
         </Link>
@@ -158,7 +158,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
       <div className={`flex-1 min-h-screen flex flex-col relative z-[1] transition-[margin] duration-200 ${collapsed ? "lg:ml-[68px]" : "lg:ml-[240px]"}`}>
         <header className="sticky top-0 z-10 h-[68px] bg-[#050505]/90 backdrop-blur-xl border-b border-white/[0.055] flex items-center justify-between px-8">
           <div className="flex items-center gap-2 uppercase tracking-[0.3em] text-[8.5px] text-white/30">
-            <span>FormForge</span>
+            <span>formFactory</span>
             <ChevronRight size={10} />
             <span>Dashboard</span>
             <ChevronRight size={10} />

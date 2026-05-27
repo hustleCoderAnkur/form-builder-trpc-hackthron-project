@@ -126,7 +126,7 @@ function AuthPageContent() {
                                 </div>
 
                                 <div className="font-serif text-[28px] font-black uppercase tracking-[0.04em]">
-                                    FormForge
+                                    formFactory
                                 </div>
                             </div>
                         </Link>
@@ -283,7 +283,7 @@ function AuthPageContent() {
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
-                                            placeholder="creator@formforge.dev"
+                                            placeholder="creator@formFactory.dev"
                                             className="h-[50px] w-full border border-white/[0.055] bg-[#0e0e0e] pl-[42px] pr-[14px] text-[12px] tracking-[0.04em] text-[#f0ede8] outline-none transition-all placeholder:text-white/15 focus:border-white/20 focus:bg-[#121212]"
                                         />
                                     </div>
@@ -368,7 +368,7 @@ function AuthPageContent() {
 
                             <div className="mt-5 flex items-center justify-between border-t border-white/[0.055] pt-[14px]">
                                 <span className="text-[8px] uppercase tracking-[0.26em] text-white/35">
-                                    FormForge
+                                    formFactory
                                 </span>
 
                                 <div className="flex items-center gap-1 text-white/35">
