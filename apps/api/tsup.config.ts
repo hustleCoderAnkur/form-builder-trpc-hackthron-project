@@ -1,13 +1,14 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["./src/index.ts"],
-  splitting: false,
-  bundle: true,
-  outDir: "./dist",
+  entry: ["src/index.ts"],
+  format: ["cjs"],
+  target: "es2022",
   clean: true,
-  env: { IS_SERVER_BUILD: "true" },
-  loader: { ".json": "copy" },
-  minify: true,
-  sourcemap: false,
+  noExternal: [
+    "@repo/logger",
+    "@repo/services",
+    "@repo/shared",
+    "@repo/trpc",
+  ],
 });
