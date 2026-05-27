@@ -1,12 +1,11 @@
-import { router } from "./trpc";
 
-import { healthRouter } from "./routes/health/route";
-import { authRouter } from "./routes/auth/route";
+export { appRouter } from "./routers/index.js";
+export type { AppRouter } from "./routers/index.js";
 
-export const serverRouter = router({
-  health: healthRouter,
-  auth: authRouter,
-});
+export { createContext } from "./context.js";
+export type { Context, AuthUser } from "./context.js";
 
-export { createContext } from "./context";
-export type ServerRouter = typeof serverRouter;
+export { signJwt, verifyJwt } from "./lib/jwt.js";
+
+export { publicProcedure, protectedProcedure, router } from "./trpc.js";
+export type { ServerRouter } from "./routers/index.js";

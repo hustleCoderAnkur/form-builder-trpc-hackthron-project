@@ -1,13 +1,20 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  DATABASE_URL: z.string().describe("DB URL"),
+  DATABASE_URL: z.string().url("DATABASE_URL must be a valid connection URL"),
+  NODE_ENV: z
+    .enum(["development", "test", "production"])
+    .default("development"),
 });
 
-function createEnv(env: NodeJS.ProcessEnv) {
-  const safeParseResult = envSchema.safeParse(env);
-  if (!safeParseResult.success) throw new Error(safeParseResult.error.message);
-  return safeParseResult.data;
+const parsed = envSchema.safeParse(process.env);
+
+if (!parsed.success) {
+  console.error(
+    "Invalid database environment variables:",
+    parsed.error.flatten()
+  );
+  process.exit(1);
 }
 
-export const env = createEnv(process.env);
+export const env = parsed.data;

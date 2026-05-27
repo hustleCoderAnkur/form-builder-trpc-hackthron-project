@@ -1,62 +1,31 @@
-import express from "express";
-import { logger } from "@repo/logger";
-import cors from "cors";
+import express from "express"
+import cookieParser from "cookie-parser"
+import * as trpcExpress from "@trpc/server/adapters/express"
+import { apiReference } from "@scalar/express-api-reference"
+import { appRouter, createContext } from "@repo/trpc"
+import { corsMiddleware, blockBadActors, errorHandler } from "./middleware/security"
+import { buildOpenApiSpec } from "./openapi/spec"
+import restRouter from "./rest/router"
 
-import * as trpcExpress from "@trpc/server/adapters/express";
-import { generateOpenApiDocument, createOpenApiExpressMiddleware } from "trpc-to-openapi";
-import { apiReference } from "@scalar/express-api-reference";
+export const app = express()
 
-import { serverRouter, createContext } from "@repo/trpc/server";
+app.use(corsMiddleware)
+app.use(express.json({ limit: "100kb" }))
+app.use(cookieParser())
+app.use(blockBadActors)
 
-import { env } from "./env";
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok", ts: Date.now(), version: "1.0.0" })
+})
 
-export const app = express();
-const openApiDocument = generateOpenApiDocument(serverRouter, {
-  title: "Streamyst OpenAPI",
-  version: "1.0.0",
-  baseUrl: env.BASE_URL.concat("/api"),
-});
+app.get("/openapi.json", (_req, res) => {
+  res.json(buildOpenApiSpec())
+})
 
-if (env.NODE_ENV !== "prod") {
-  app.use(
-    cors({
-      origin: "*",
-    }),
-  );
-}
+app.use("/docs", apiReference({ url: "/openapi.json", theme: "saturn" }))
 
-app.use(express.json());
+app.use("/api/v1", restRouter)
 
-app.get("/", (req, res) => {
-  return res.json({ message: "Streamyst is up and running..." });
-});
+app.use("/trpc", trpcExpress.createExpressMiddleware({ router: appRouter, createContext }))
 
-app.get("/health", (req, res) => {
-  return res.json({ message: "Streamyst server is healthy", healthy: true });
-});
-
-logger.debug(`openapi.json: ${env.BASE_URL}/openapi.json`);
-app.get("/openapi.json", (req, res) => {
-  return res.json(openApiDocument);
-});
-
-logger.debug(`docs: ${env.BASE_URL}/docs`);
-app.use("/docs", apiReference({ url: "/openapi.json" }));
-
-app.use(
-  "/api",
-  createOpenApiExpressMiddleware({
-    router: serverRouter,
-    createContext,
-  }),
-);
-
-app.use(
-  "/trpc",
-  trpcExpress.createExpressMiddleware({
-    router: serverRouter,
-    createContext,
-  }),
-);
-
-export default app;
+app.use(errorHandler)
