@@ -19,16 +19,16 @@ pnpm dev                      # web :3000, api :8000
 |---|---|
 | Email | `demo@formFactory.dev` |
 | Password | `demo1234` |
-| Public form | http://localhost:3000/f/cyberpunk-fan-survey-demo |
+| Public form | https://form-builder-trpc-hackthron-project.vercel.app/f/cyberpunk-fan-survey-demo |
 
 ## Apps
 
 | App | URL |
 |-----|-----|
-| Web | http://localhost:3000 |
-| API health | http://localhost:8000/health |
-| Scalar API docs | http://localhost:8000/docs |
-| REST API | http://localhost:8000/api/v1 |
+| Web | https://form-builder-trpc-hackthron-project.vercel.app/ |
+| API health | https://form-builder-trpc-hackthron-project.vercel.app/health |
+| Scalar API docs | https://form-builder-trpc-hackthron-project.vercel.app/docs |
+| REST API | https://form-builder-trpc-hackthron-project.vercel.app/api/v1 |
 
 ## Architecture
 
