@@ -26,9 +26,9 @@ pnpm dev                      # web :3000, api :8000
 | App | URL |
 |-----|-----|
 | Web | https://form-builder-trpc-hackthron-project.vercel.app/ |
-| API health | https://form-builder-trpc-hackthron-project.vercel.app/health |
+| API health | https://form-builder-trpc-hackthron-project-1.onrender.com/health |
 | Scalar API docs | https://form-builder-trpc-hackthron-project.vercel.app/docs |
-| REST API | https://form-builder-trpc-hackthron-project.vercel.app/api/v1 |
+| REST API |https://form-builder-trpc-hackthron-project-1.onrender.com/api/v1 |
 
 ## Architecture
 
@@ -43,7 +43,7 @@ pnpm dev                      # web :3000, api :8000
 ```env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/dev
 JWT_SECRET=change-me
-WEB_URL=http://localhost:3000
-API_URL=http://localhost:8000
+WEB_URL=https://form-builder-trpc-hackthron-project.vercel.app/
+API_URL=https://form-builder-trpc-hackthron-project-1.onrender.com
 # Optional: UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
 ```

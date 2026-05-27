@@ -308,8 +308,7 @@ export default function SettingsPage() {
 
                   <a
                     href={
-                      process.env.NEXT_PUBLIC_API_URL?.replace("/trpc", "") ??
-                      "https://form-builder-trpc-hackthron-project.vercel.app/docs"
+                      `${process.env.API_URL?.replace("/trpc", "") ?? ""}/docs`
                     }
                     target="_blank"
                     rel="noreferrer"

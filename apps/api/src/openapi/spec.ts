@@ -1,5 +1,5 @@
 export function buildOpenApiSpec() {
-  const base = process.env.API_BASE_URL ?? "https://form-builder-trpc-hackthron-project.vercel.app/";
+  const base = process.env.API_BASE_URL ?? "https://form-builder-trpc-hackthron-project-1.onrender.com";
   return {
     openapi: "3.1.0",
     info: {
