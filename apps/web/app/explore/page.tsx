@@ -55,7 +55,6 @@ export default function formFactoryArcadeHome() {
         <AnalyticsPreviewSection />
         <VisibilityModesSection />
         <TechStackSection />
-        <PricingSection />
         <ExploreFormsSection />
         <ApiDocsSection />
 
@@ -76,7 +75,7 @@ function Navbar() {
           <Link
             key={label}
             href={href}
-            className={`relative z-10 text-[11px] tracking-[0.18em] text-black transition-all duration-200 hover:scale-[1.04] hover:opacity-70 ${index === 2 ? "text-[20px] tracking-normal" : ""}`}
+            className={`relative z-10 text-[20px] tracking-[0.18em] text-black transition-all duration-200 hover:scale-[1.04] hover:opacity-70 ${index === 2 ? "text-[20px] tracking-normal" : ""}`}
           >
             {label}
           </Link>
@@ -120,10 +119,7 @@ function HeroSection() {
           FRONTEND EXTENSION
         </motion.h1>
 
-        <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl font-mono text-sm leading-7 text-white/55">
-          Shakanksh is a creative frontend developer who works as a dedicated team member. One monthly fee, no contracts,
-          and no hourly tracking.
-        </motion.p>
+
 
         <motion.div variants={fadeUp} className="mt-12">
           <button
@@ -462,55 +458,7 @@ function TechStackSection() {
   )
 }
 
-function PricingSection() {
-  return (
-    <section
-      id="pricing"
-      className="relative border-t border-white/10 px-5 py-24"
-    >
-      <div className="mx-auto max-w-5xl">
-        <SectionIntro
-          level="Level 07 - Pricing"
-          title="Simple Pricing"
-          quote="No enterprise nonsense."
-          text="Transparent plans for indie builders, startups and growing teams."
-        />
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-2">
-          <div className="border border-white/10 bg-[#0e0e0e] p-8">
-            <div className="text-sm uppercase tracking-[0.18em] text-white/35">
-              Free
-            </div>
-
-            <div className="mt-4 text-6xl font-black text-white">$0</div>
-
-            <ul className="mt-8 space-y-4 text-sm text-white/60">
-              <li>3 Active Forms</li>
-              <li>Public + Unlisted Links</li>
-              <li>Basic Analytics</li>
-            </ul>
-          </div>
-
-          <div className="border border-white bg-white p-8 text-black">
-            <div className="text-sm uppercase tracking-[0.18em] text-black/50">
-              Pro
-            </div>
-
-            <div className="mt-4 text-6xl font-black">$19</div>
-
-            <ul className="mt-8 space-y-4 text-sm text-black/70">
-              <li>Unlimited Forms</li>
-              <li>Advanced Analytics</li>
-              <li>Email Workflows</li>
-              <li>CSV Export</li>
-              <li>Custom Themes</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 function ExploreFormsSection() {
   return (

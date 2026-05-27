@@ -259,7 +259,7 @@ function AuthPageContent() {
                                                     value={name}
                                                     onChange={(e) => setName(e.target.value)}
                                                     required={isSignup}
-                                                    placeholder="Ankur Kumawat"
+                                                    placeholder="enter your Name"
                                                     className="h-[50px] w-full border border-white/[0.055] bg-[#0e0e0e] pl-[42px] pr-[14px] text-[12px] tracking-[0.04em] text-[#f0ede8] outline-none transition-all placeholder:text-white/15 focus:border-white/20 focus:bg-[#121212]"
                                                 />
                                             </div>
@@ -283,7 +283,7 @@ function AuthPageContent() {
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
-                                            placeholder="creator@formFactory.dev"
+                                            placeholder="Enter your Email"
                                             className="h-[50px] w-full border border-white/[0.055] bg-[#0e0e0e] pl-[42px] pr-[14px] text-[12px] tracking-[0.04em] text-[#f0ede8] outline-none transition-all placeholder:text-white/15 focus:border-white/20 focus:bg-[#121212]"
                                         />
                                     </div>
@@ -305,7 +305,7 @@ function AuthPageContent() {
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
                                             required
-                                            placeholder="••••••••"
+                                            placeholder=" "
                                             className="h-[50px] w-full border border-white/[0.055] bg-[#0e0e0e] pl-[42px] pr-[42px] text-[12px] tracking-[0.04em] text-[#f0ede8] outline-none transition-all placeholder:text-white/15 focus:border-white/20 focus:bg-[#121212]"
                                         />
 
