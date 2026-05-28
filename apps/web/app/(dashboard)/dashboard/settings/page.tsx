@@ -308,7 +308,7 @@ export default function SettingsPage() {
 
                   <a
                     href={
-                      `${process.env.API_URL?.replace("/trpc", "") ?? ""}/docs`
+                      "https://form-builder-trpc-hackthron-project-1.onrender.com/docs"
                     }
                     target="_blank"
                     rel="noreferrer"
