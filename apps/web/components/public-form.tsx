@@ -114,7 +114,7 @@ export function PublicForm({ form, fields, theme }: {
         style={{ y: bossY }}
         animate={{ y: [0, -25, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="fixed right-0 top-0 h-screen w-20 sm:w-32 xl:w-108 p-10 object-contain z-0 pointer-events-none opacity-90"
+        className="fixed right-0 top-0 h-screen w-28 sm:w-32 xl:w-108 p-10 object-contain z-0 pointer-events-none opacity-90"
       />
 
       <motion.form
