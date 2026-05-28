@@ -105,7 +105,7 @@ export function PublicForm({ form, fields, theme }: {
         style={{ y: warriorY }}
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="fixed left-0 top-0 h-screen w-70 object-contain z-0 pointer-events-none hidden xl:block"
+        className="fixed left-0 top-0 h-screen w-20 sm:w-32 xl:w-70 object-contain z-0 pointer-events-none opacity-90"
       />
 
       <motion.img
@@ -114,14 +114,14 @@ export function PublicForm({ form, fields, theme }: {
         style={{ y: bossY }}
         animate={{ y: [0, -25, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="fixed right-0 top-0 h-screen w-108 p-10 object-contain z-0 pointer-events-none hidden xl:block"
+        className="fixed right-0 top-0 h-screen w-20 sm:w-32 xl:w-108 p-10 object-contain z-0 pointer-events-none opacity-90"
       />
 
       <motion.form
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         onSubmit={handleSubmit}
-        className="relative z-10 max-w-3xl mx-auto mr-108 rounded-[2.5rem] border border-white/10 bg-[#0b0b0b]/95 overflow-hidden"
+        className="relative z-10 w-full max-w-sm sm:max-w-xl xl:max-w-3xl mx-auto px-2 sm:px-0 xl:mr-[27rem] xl:ml-[18rem] rounded-[2.5rem] border border-white/10 bg-[#0b0b0b]/95 overflow-hidden"
       >
         <div className="relative px-10 py-10 border-b border-white/5">
           <div className="flex items-center justify-between gap-6 flex-wrap">
